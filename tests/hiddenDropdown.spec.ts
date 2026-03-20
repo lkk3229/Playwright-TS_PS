@@ -34,7 +34,7 @@ for(let i=0; i<count; i++){
 
 //Select/Click on specific option from the dropdown
 for(let i=0; i<count; i++){
-    const optionText1:string=await options.nth(i).textContent();   
+    const optionText1:string=(await options.nth(i).textContent()) ?? "";
     if(optionText1.trim()==="IT Manager"){
         await options.nth(i).click();
         break;
