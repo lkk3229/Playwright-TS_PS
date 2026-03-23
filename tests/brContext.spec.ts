@@ -1,6 +1,9 @@
 import {test, expect, Page, chromium, firefox, webkit} from '@playwright/test';
 
-// Fixtures in Playwright are a powerful way to set up and tear down test environments, manage test data, and share common resources across multiple tests. They help in creating a consistent and reusable testing environment, making it easier to write and maintain tests. Fixtures can be used to initialize browser contexts, set up test data, or perform any necessary setup before running the tests. They can also be used to clean up resources after the tests have completed.
+// Fixtures in Playwright are a powerful way to set up and tear down test environments, manage test data, and share common resources across multiple tests.
+// They help in creating a consistent and reusable testing environment, making it easier to write and maintain tests.
+// Fixtures can be used to initialize browser contexts, set up test data, or perform any necessary setup before running the tests.
+// They can also be used to clean up resources after the tests have completed.
 //=======================================================================================
 
 // Browser ---> Context ---> Page
