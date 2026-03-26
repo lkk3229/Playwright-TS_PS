@@ -13,6 +13,10 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './tests',
+
+  //grep: /@sanity/, // Run only tests with @sanity tag
+  //grepInvert: /@regression/, // Exclude tests with @regression tag
+
   // To change the timeout for all tests, use the timeout option:
   // default is 30 seconds (30000 milliseconds)
   //timeout: 60000, // Set the test timeout to 60 seconds (60000 milliseconds)
@@ -23,7 +27,7 @@ export default defineConfig({
   /* Run tests in files in parallel */
 
   /* Run tests in files in parallel */
-  fullyParallel: true,
+  fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
