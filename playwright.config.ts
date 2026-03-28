@@ -36,7 +36,21 @@ export default defineConfig({
  // workers: process.env.CI ? 1 : undefined,
   workers: 1, // Run tests sequentially by using a single worker. This is useful when you want to avoid parallel execution of tests, which can be helpful for debugging or when tests have shared state that could lead to conflicts.
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+ // reporter: 'html',
+ /* reporter: [['html',{ open:'always',outputFolder:'html-reporter'}],
+            ['line'],
+            ['json', { outputFile: 'json-reporter/test-results.json' }],
+            ['junit', { outputFile: 'junit-reporter/test-results.xml' }],
+            ['dot'],
+            ['list']]
+  */
+    //reporter: [['allure-playwright',{outputFolder:'allure-results'}]],
+    reporter:[['./my-custom-reporter.ts']],
+
+  
+
+  // Generate HTML report but do not open it automatically after the test run. You can open the report manually by navigating to the generated report file (usually located in the "playwright-report" directory) and opening it in a web browser.
+  //reporter: [['html', { open: 'never' }]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     //screenshot: 'only-on-failure', // Capture screenshots only when a test fails

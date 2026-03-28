@@ -7,7 +7,7 @@ Pre-requisite:
 Install the csv-parse module to read CSV files:
         npm install csv-parse
 */
-
+ 
 // Reading data from csv
 const csvPath="TestData/data.csv";
 const fileContent=fs.readFileSync(csvPath,'utf-8'); 
@@ -15,7 +15,7 @@ const fileContent=fs.readFileSync(csvPath,'utf-8');
 const records= parse(fileContent, {
     columns: true, // Use first row as column names
     skip_empty_lines: true // Skip empty lines in the CSV
-});
+}); 
 
 // main test
 test.describe('Login Tests data driven', async () => {
