@@ -44,8 +44,8 @@ export default defineConfig({
             ['dot'],
             ['list']]
   */
-    //reporter: [['allure-playwright',{outputFolder:'allure-results'}]],
-    reporter:[['./my-custom-reporter.ts']],
+    reporter: [['allure-playwright',{outputFolder:'allure-results'}]],
+    //reporter:[['./my-custom-reporter.ts']],
 
   
 
@@ -63,6 +63,7 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
     testIdAttribute: 'data-test-id',   // to use data-test-id attribute for locating elements
+    ignoreHTTPSErrors: true, // Disable SSL certificate verification for API requests
   },
 
   /* Configure projects for major browsers */
